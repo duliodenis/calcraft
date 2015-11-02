@@ -46,6 +46,17 @@ class ViewController: UIViewController {
     
     // MARK: Calculator Action Operations
     
+    @IBAction func clearTapped(sender: AnyObject) {
+        playSound()
+        currentDisplay = ""
+        leftValueString = ""
+        rightValueString = ""
+        currentOperation = Operation.Empty
+        result = ""
+        outputLabel.text = "0"
+    }
+    
+    
     @IBAction func numberPressed(button: UIButton!) {
         playSound()
         
